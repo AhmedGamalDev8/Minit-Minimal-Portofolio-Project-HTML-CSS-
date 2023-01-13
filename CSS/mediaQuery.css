@@ -1,0 +1,43 @@
+/* Mobiles Screens */
+@media (max-width: 767px) {
+  .landing,
+  .section-1,
+  .section-2,
+  .section-3,
+  .section-4,
+  article.text {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  /* Start Landing Page */
+  section.landing {
+    background-color: darkcyan;
+    height: 100vh;
+  }
+  section.landing nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section.landing nav ul li a {
+    margin-bottom: 20px;
+  }
+  section.landing .logo img {
+    width: 100px;
+    cursor: pointer;
+  }
+  /* End Landing Page */
+}
+/* Small Mobiles Screens */
+@media (min-width: 768px) and (max-width: 991px) {
+  
+}
+/* Medium Mobiles Screens */
+@media (min-width: 992px) and (max-width: 1199px) {
+  
+}
+/* Large Mobiles Screens */
+@media (min-width: 1200px) and (max-width: 1400px) {
+  
+}

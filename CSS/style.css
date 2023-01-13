@@ -1,0 +1,560 @@
+/* Start Global */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: sans-serif
+}
+html {
+	scroll-behavior: smooth;
+}
+ul {
+	list-style: none;
+	margin: 0;
+}
+ul li {
+	display: inline-block;
+}
+ul li a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--colorTwo);
+	margin-left: 40px;
+	transition: all .3s;
+}
+ul li a:hover {
+	color: var(--colorOne)
+}
+.landing,
+.section-1,
+.section-2,
+.section-3,
+.section-4,
+article.text {
+	padding: 0 10%;
+	margin: 0 auto;
+	margin-bottom: 5%
+}
+article.text {
+	margin-top: 5%;
+	margin-bottom: 5%;
+	text-transform: uppercase;
+	font-size: 35px
+}
+::selection {
+	background-color: var(--colorOne)
+}
+/* End Global */
+/* Start Variables */
+:root {
+	--colorOne: #fbe831;
+	--colorTwo: #1e1e1e;
+}
+/* End Variables */
+/* Start Landing */
+section.landing {
+	height: 100vh
+}
+section.landing nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+	/* margin-bottom: 7%; */
+}
+section.landing i {
+	display: none;
+}
+section.landing .logo img {
+	width: 150px;
+	cursor: pointer;
+}
+section.landing main {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: 450px;
+	grid-template-areas: "text text text figr figr figr";
+	gap: 20px;
+}
+section.landing main article {
+	grid-area: text;
+}
+section.landing main article h1 {
+	font-size: 50px;
+	font-weight: 800;
+	margin-bottom: 20px;
+	text-transform: capitalize;
+}
+section.landing main article p {
+	text-align: justify;
+	margin: 40px 0;
+	line-height: 2;
+	font-size: x-small;
+	font-weight: bold;
+	max-width: 95%;
+}
+section.landing main article button {
+	padding: 10px 30px;
+	outline: none;
+	border: none;
+	background-color: var(--colorOne);
+	color: var(--colorTwo);
+	text-transform: uppercase;
+	font-weight: bolder;
+	cursor: pointer;
+	transition: all .4s ease-in;
+}
+section.landing main article button:hover {
+	background-color: #ecdd4f;
+}
+section.landing main figure {
+	grid-area: figr;
+	background-color: var(--colorOne);
+	transition: all .4s ease-in-out;
+	position: relative;
+}
+section.landing main figure img {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+/* End Landing */
+/* Start Section 1 */
+.section-1 nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 5%
+}
+.section-1 nav ul li,
+aside span {
+	padding: 8px 14px;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all .4s;
+}
+.section-1 nav ul li.active,
+.section-1 nav ul li:hover {
+	background-color: var(--colorOne);
+	color: var(--colorTwo);
+}
+.section-1 .grid {
+	height: 550px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(autofit, minmax(500px, 1fr));
+	grid-template-areas: 
+		"one two three"
+		"four two six"
+		"four five six";
+	gap: 20px;
+	margin-bottom: 5%;
+}
+.section-1 .grid article {
+	width: 100%;
+	height: 100%;
+	background-color: #ddd;
+}
+.section-1 .grid .one, .two, .three, .four, .five, .six {
+	position: relative;
+	transition: all 1s;
+}
+.section-1 .grid .one {
+	grid-area: one;
+	background-color: var(--colorOne);
+}
+.section-1 .grid .one::before {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: "Artwork";
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 2s;
+}
+.section-1 .grid .one::after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: "branding";
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 10px;
+	top: 10%;
+	transition: all 2s;
+}
+.section-1 .grid .two {
+	grid-area: two;
+}
+.section-1 .grid .two:hover::before {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: "web";
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--colorOne);
+}
+.section-1 .grid .two:hover::after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: "branding";
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 10px;
+	top: 10%;
+}
+.section-1 .grid .three {
+	grid-area: three;
+}
+.section-1 .grid .three:hover::before {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: "illustration";
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--colorOne);
+}
+.section-1 .grid .three:hover::after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: "branding";
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 10px;
+	top: 10%;
+}
+.section-1 .grid .four {
+	grid-area: four;
+}
+.section-1 .grid .four:hover::before {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: "branding";
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--colorOne);
+}
+.section-1 .grid .four:hover::after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: "branding";
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 10px;
+	top: 10%;
+}
+.section-1 .grid .five {
+	grid-area: five;
+}
+.section-1 .grid .five:hover::before {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: "goods";
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--colorOne);
+}
+.section-1 .grid .five:hover::after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: "branding";
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 10px;
+	top: 10%;
+}
+.section-1 .grid .six {
+	grid-area: six;
+}
+.section-1 .grid .six:hover::before {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: "services";
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--colorOne);
+}
+.section-1 .grid .six:hover::after {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: "branding";
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 10px;
+	top: 10%;
+}
+.section-1 button.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 5%;
+	outline: none;
+	border: none;
+	padding: 9px 14px;
+	background-color: var(--colorOne);
+	color: var(--colorTwo);
+	text-transform: uppercase;
+	font-weight: bolder;
+	cursor: pointer;
+}
+button.btn {
+	position: relative;
+	left: 44%;
+	transition: all .4s ease-in;
+}
+button.btn:hover {
+	background-color: #ecdd4f;
+}
+/* End Section 1 */
+/* Start Section 2 */
+.section-2 p {
+	max-width: 50%;
+	line-height: 2;
+	font-weight: bold;
+	font-size: small;
+	margin-bottom: 5%;
+}
+.section-2 .flex {
+	display: grid;
+	grid-template-columns: repeat(3, 340px);
+	grid-template-rows: 370px;
+	gap: 30px;
+}
+.section-2 .flex .art-img-1,
+.section-2 .flex .art-img-2 {
+	background-color: #ddd;
+	transition: all .4s ease-in-out;
+	position: relative;
+}
+.section-2 .flex .art-img-1:hover,
+.section-2 .flex .art-img-2:hover {
+	background-color: var(--colorOne);
+}
+.section-2 .flex .art-img-1:hover::before,
+.section-2 .flex .art-img-2:hover::before{
+	background-color: var(--colorOne);
+	content: "nice photo";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	color: var(--colorTwo);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+}
+.section-2 .flex .art-img-3 {
+	padding: 20% 0;
+	width: 100%;
+}
+.section-2 .flex .art-img-3 h3 {
+	text-transform: capitalize;
+	margin-bottom: 10%
+}
+.section-2 .flex .art-img-3 p {
+	font-size: small;
+	margin: 10% 0;
+}
+.section-2 .flex .art-img-3 button {
+	outline: none;
+	border: none;
+	padding: 2px 10px;
+	text-transform: uppercase;
+	font-weight: 700;
+	background-color: transparent;
+	cursor: pointer;
+	transition: all .4s;
+}
+.section-2 article button:hover {
+	color: var(--colorOne)
+}
+/* End Section 2 */
+/* Start Section 3 */
+.section-3 p {
+	max-width: 50%;
+	line-height: 2;
+	font-weight: bold;
+	font-size: small;
+	margin-bottom: 5%;
+}
+.section-3 .blog {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 230px 400px;
+	gap: 20px;
+}
+.section-3 .blog article {
+	background-color: #ddd;
+	position: relative;
+}
+.section-3 .blog article:hover::before {
+	position: absolute;
+	content: "read more";
+	width: 100%;
+	height: 100%;
+	background-color: var(--colorOne);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+	transition: all 2s;
+}
+.section-3 .blog section h3 {
+	text-transform: uppercase;
+	margin-bottom: 30px;
+}
+.section-3 .blog section p {
+	max-width: 85%;
+	text-align: justify;
+	margin-bottom: 30px;
+}
+/* End Section 3 */
+/* Start Section 4 */
+.section-4 p {
+	max-width: 50%;
+	line-height: 2;
+	font-weight: bold;
+	font-size: small;
+	margin-bottom: 5%;
+}
+.section-4 section.grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 450px;
+	gap: 30px;
+}
+.section-4 section.grid .right {
+	background-color: #ddd;
+	position: relative;
+}
+.section-4 section.grid .right::before {
+	position: absolute;
+	content: "nice photo";
+	text-transform: uppercase;
+	width: 100%;
+	height: 100%;
+	font-size: 20px;
+	background-color: var(--colorOne);
+	color: var(--colorTwo);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.section-4 section.grid .left h3 {
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+.section-4 section.grid .left form input[type="text"], 
+.section-4 section.grid .left form input[type="email"] {
+	display: block;
+	border: solid 1px var(--colorTwo);
+	outline: none;
+	padding: 15px;
+	margin: 10px 0;
+	width: 100%;
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+.section-4 section.grid .left form input[type="text"]:focus, 
+.section-4 section.grid .left form input[type="email"]:focus {
+	outline: none;
+}
+.section-4 section.grid .left form input[type="submit"] {
+	padding: 10px 14px;
+	border: none;
+	outline: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	background-color: var(--colorOne);
+	color: var(--colorTwo);
+	cursor: pointer;
+	transition: all .4s ease-in;
+}
+.section-4 section.grid .left form input[type="submit"]:hover {
+	background-color: #ecdd4f;
+}
+.section-4 section.grid .left form textarea {
+	resize: none;
+	border: solid 1px var(--colorTwo);
+	padding: 15px;
+	width: 100%;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	outline: none;
+}
+.section-4 .grid form ::placeholder {
+	color: var(--colorTwo);
+}
+/* End Section 4 */
+/* Start Footer */
+footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: none;
+	margin-top: 10px;
+	background-color: #ddd;
+	height: 100px;
+	padding: 0 15%;
+}
+footer :first-child {
+	text-transform: capitalize;
+	font-size: 18px;
+}
+footer :first-child span {
+	color: red;
+	font-size: 23px;
+}
+footer :last-child {
+	display: inline-block;
+}
+footer :last-child ul li i {
+	cursor: pointer;
+	font-size: 25px;
+	transition: all .1s ease-in-out;
+	margin-left: 15px;
+	color: var(--colorTwo)
+}
+footer :last-child ul li i:hover {
+	color: var(--colorOne)
+}
+/* End Footer */
